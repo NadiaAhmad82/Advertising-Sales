@@ -14,6 +14,6 @@ st.write(df)
 def user_input_features():
     TV_value = st.sidebar.slider
     Newspaper_value = st.sidebar.slider
-    Radio-value = st.sidebar.slider
+    Radio_value = st.sidebar.slider
   
 
