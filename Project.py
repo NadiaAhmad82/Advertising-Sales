@@ -26,6 +26,19 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
+data = pd.read_csv('Advertising.csv')
+data = data.drop(data.columns[0], axis=1)
+
+X = data[['TV','Radio', 'Newspaper']]
+y = data['Sales']
+
+regr = linear_model.LinearRegression()
+regr.fit(X,y)
+
+prediction = regr.predict(df)
+
+st.subheader('Prediction')
+st.write(prediction[0])
 
 
 
