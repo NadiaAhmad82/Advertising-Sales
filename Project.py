@@ -11,11 +11,7 @@ This app predicts the **Advertising Sales** type!
 st.sidebar.header('User Input Parameters')
 st.write(df)
          
-from sklearn.neighbors import KNeighborsClassifier
-knn = KNeighborsClassifier(n_neighbors = 5)
-knn
-
-from sklearn.metrics import accuracy_score
-
-y_model = knn.predict(Xtest) 
-accuracy_score(ytest, y_model)
+st.header("Advertising Sales")
+st.write(pd.DataFrame({
+    'Intplan': ['yes', 'yes', 'yes', 'no'],
+    'Churn Status': [0, 0, 0, 1]
