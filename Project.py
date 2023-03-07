@@ -35,7 +35,7 @@ y = data['Sales']
 regr = LinearRegression()
 regr.fit(X,y)
 
-prediction = regr.predict(df)
+prediction = regr.predict(data)
 
 st.subheader('Prediction')
 st.write(prediction[0])
