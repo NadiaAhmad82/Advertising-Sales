@@ -32,10 +32,10 @@ data = data.drop(data.columns[0], axis=1)
 X = data[['TV','Radio', 'Newspaper']]
 y = data['Sales']
 
-model = LinearRegression()
-model.fit(X,y)
+prediction = clf.predict(df)
+prediction_proba = clf.predict_proba(df)
 
-prediction = regr.predict(df)
+
 
 st.subheader('Prediction')
 st.write(prediction[0])
