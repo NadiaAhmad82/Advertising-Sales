@@ -13,12 +13,13 @@ st.write(df)
 
 def user_input_features():
     TV_Value = st.sidebar.slider('TV Value ', 0, 150, 300)
-    Newspaper_Value = st.sidebar.slider('Newspaper Value', 0, 70, 150)
     Radio_Value = st.sidebar.slider('Radio Value', 0, 25, 50)
+    Newspaper_Value = st.sidebar.slider('Newspaper Value', 0, 70, 150)
+    
   
     data = {'TV': TV_Value,
-            'Newspaper': Newspaper_Value,
-            'Radio': Radio_Value}
+            'Radio': Radio_Value
+            'Newspaper': Newspaper_Value}
     features = pd.DataFrame(data, index=[0])
     return features
 df = user_input_features()
@@ -35,7 +36,7 @@ y = data['Sales']
 regr = LinearRegression()
 regr.fit(X,y)
 
-prediction = regr.predict(data)
+prediction = regr.predict(df)
 
 st.subheader('Prediction')
 st.write(prediction[0])
