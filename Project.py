@@ -10,9 +10,9 @@ This app predicts the **Advertising Sales** type!
 
 st.sidebar.header('User Input Parameters')
 st.write(df)
-from sklearn.naive_bayes import GaussianNB 
-model = GaussianNB()                      
-model.fit(Xtrain, ytrain)                  
-y_model = model.predict(Xtest)             
+         
+from sklearn.neighbors import KNeighborsClassifier
+knn = KNeighborsClassifier(n_neighbors = 5)
+knn
 
-
+knn.fit(Xtrain, ytrain)
