@@ -15,4 +15,7 @@ from sklearn.neighbors import KNeighborsClassifier
 knn = KNeighborsClassifier(n_neighbors = 5)
 knn
 
-knn.fit(Xtrain, ytrain)
+from sklearn.metrics import accuracy_score
+
+y_model = knn.predict(Xtest) 
+accuracy_score(ytest, y_model)
