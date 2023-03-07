@@ -12,12 +12,12 @@ st.sidebar.header('User Input Parameters')
 st.write(df)
 
 def user_input_features():
-    TV_value = st.sidebar.slider
-    Newspaper_value = st.sidebar.slider
-    Radio_value = st.sidebar.slider
-      data = {'TV': TV_value,
-            'Newspaper': Newspaper_value,
-            'Radio': Radio_value}
+    TV_Value = st.sidebar.slider('TV Value ', 0, 150, 300)
+    Newspaper_Value = st.sidebar.slider('Newspaper Value', 0, 70, 120)
+    Radio_Value = st.sidebar.slider('Radio Value', 0, 25, 50)
+  
+    data = {'TV_Value': TV Value,
+            'Newspaper_Value': Newspaper Value,
+            'Radio_Value': Radio Value}
     features = pd.DataFrame(data, index=[0])
     return features
-
