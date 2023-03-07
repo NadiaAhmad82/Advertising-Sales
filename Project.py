@@ -10,7 +10,7 @@ This app predicts the **Advertising Sales** type!
 
 st.sidebar.header('User Input Parameters')
 st.write(df)
-Advertising = datasets.load_Avertising.csv()
+
 X = Advertising.data
 Y = Advertising.target
 
