@@ -32,7 +32,7 @@ data = data.drop(data.columns[0], axis=1)
 X = data[['TV','Radio', 'Newspaper']]
 y = data['Sales']
 
-regr = linear_model.LinearRegression()
+regr = LinearRegression()
 regr.fit(X,y)
 
 prediction = regr.predict(df)
