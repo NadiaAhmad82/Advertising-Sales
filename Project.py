@@ -12,9 +12,9 @@ st.sidebar.header('User Input Parameters')
 st.write(df)
 
 def user_input_features():
-    TV_Value = st.sidebar.slider('TV Value ', 0, 150, 500)
-    Newspaper_Value = st.sidebar.slider('Newspaper Value', 0, 150, 500)
-    Radio_Value = st.sidebar.slider('Radio Value', 0, 150, 200)
+    TV_Value = st.sidebar.slider('TV Value ', 0, 150, 300)
+    Newspaper_Value = st.sidebar.slider('Newspaper Value', 0, 70, 150)
+    Radio_Value = st.sidebar.slider('Radio Value', 0, 25, 50)
   
     data = {'TV_Value': TV_Value,
             'Newspaper_Value': Newspaper_Value,
@@ -32,10 +32,10 @@ data = data.drop(data.columns[0], axis=1)
 X = data[['TV','Radio', 'Newspaper']]
 y = data['Sales']
 
-prediction = clf.predict(df)
-prediction_proba = clf.predict_proba(df)
+regr = linear_model.LinearRegression()
+regr.fit(X,y)
 
-
+prediction = regr.predict(df)
 
 st.subheader('Prediction')
 st.write(prediction[0])
