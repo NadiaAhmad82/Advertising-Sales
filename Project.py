@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from sklearn import datasets
-from sklearn.ensemble import LinearRegression
+from sklearn.linear_model import LinearRegression
 df = pd.read_csv('Advertising.csv')
 st.write("""
 # Simple Prediction App
