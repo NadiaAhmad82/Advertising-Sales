@@ -33,7 +33,5 @@ Y = Advertising.target
 clf = RandomForestClassifier()
 clf.fit(X, Y)
 
-prediction = clf.predict(df)
-prediction_proba = clf.predict_proba(df)
 
 
