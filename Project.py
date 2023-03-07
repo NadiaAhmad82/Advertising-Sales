@@ -12,6 +12,6 @@ st.sidebar.header('User Input Parameters')
 st.write(df)
          
 st.header("Advertising Sales")
-st.write(pd.DataFrame({
+st.write(pd.df({
     'Intplan': ['yes', 'yes', 'yes', 'no'],
     'Churn Status': [0, 0, 0, 1]
