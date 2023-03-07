@@ -10,8 +10,12 @@ This app predicts the **Advertising Sales** type!
 
 st.sidebar.header('User Input Parameters')
 st.write(df)
-         
-st.header("Advertising Sales")
-st.write(pd.df({
-    'Intplan': ['yes', 'yes', 'yes', 'no'],
-    'Churn Status': [0, 0, 0, 1]
+
+Xtrain, Xtest, ytrain, ytest = train_test_split(X_Advertising, y_Advertising,random_state=1)
+clf = tree.DecisionTreeClassifier()
+clf = clf.fit(Xtrain, ytrain)
+
+
+
+clf.fit(Xtrain, ytrain)  
+
